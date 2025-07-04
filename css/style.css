@@ -2,12 +2,13 @@
       box-sizing: border-box;
     }
 
-    body {
+    body,html {
   /* font-family: 'Raleway', sans-serif; */
     font-family: 'Source Sans Pro', sans-serif;
 
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Garamond', serif;
@@ -69,11 +70,29 @@ font-size: 2rem;  /* ~28px */
   background-color: #B99E5C;
   color: #fff;
 }
+
 #slider {
   position: relative;
   height: 95vh;
   overflow: hidden;
 }
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  #slider {
+    height: 80vh;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  #slider {
+    height: 60vh;
+  }
+}
+@media (max-width: 1080px) {
+.about {
+    height: 550px !important;
+}}
 
 #slider::before {
   content: "";
@@ -359,6 +378,9 @@ span[data-slide-description] {
     #aa{
         text-align: justify;
     }
+    .about{
+      height:450px;
+    }
 .service-card {
   position: relative;
   height: 350px;
@@ -384,7 +406,7 @@ span[data-slide-description] {
 .service-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* stronger dark overlay */
+  background: rgba(0, 0, 0, 0.8); /* stronger dark overlay */
   z-index: 1;
 }
 
@@ -651,3 +673,380 @@ span[data-slide-description] {
         padding: 7px 18px;
       }
     }
+
+/* about page */
+
+.about-banner {
+  background:   url('../image/aboutbanner.jpg') center center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+}
+
+.about-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 13, 14, 0.6); /* dark blue overlay */
+  z-index: 1;
+}
+
+.about-banner .container {
+  z-index: 2;
+}
+
+.about-banner h1 {
+  font-family: 'Cormorant Garamond', serif;
+
+
+
+
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.about-banner p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+}
+
+.about-section{
+  padding: 20px;
+}
+
+    .section-title {
+      /* color: #2c2c6c; */
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    .section-title .highlight {
+      color: #B99E5C;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #B99E5C;
+      font-weight: 600;
+    }
+
+    .description {
+      color: #555;
+      max-width: 480px;
+      margin-top: 20px;
+    }
+
+.discover-btn {
+  background-color: #B99E5C;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.discover-btn:hover {
+  background-color: #9b8448;
+  color: #fff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+    .img-collage {
+      position: relative;
+    }
+
+    .img-collage .img-main {
+      width: 100%;
+      border-radius: 8px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .img-main {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.img-top-right,
+.img-bottom-right {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+    .img-collage .img-top-right,
+    .img-collage .img-bottom-right {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .img-frame {
+      background: #a3863a;
+      padding: 1px;
+      border-radius: 8px;
+    }
+
+    @media (min-width: 992px) {
+      .img-collage .img-main {
+        height: 370px;
+        object-fit: cover;
+      }
+
+      .img-collage .img-top-right {
+        margin-bottom: 20px;
+      }
+    }
+
+        .values-section {
+      background: #f9f9f9;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 48px;
+      /* color: #1e1e50; */
+    }
+
+    .section-subheading {
+      font-size: 18px;
+      font-weight: 600;
+      color: #B99E5C;
+    }
+
+    .highlight {
+      color: #B99E5C;
+    }
+
+    .value-box {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    .value-icon {
+      font-size: 36px;
+      color: #B99E5C;
+      margin-right: 20px;
+    }
+
+    .value-title {
+      font-weight: 600;
+      font-size: 20px;
+      /* color: #1e1e50; */
+    }
+
+    .value-description {
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .bg-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0.05;
+      z-index: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      .section-heading {
+        font-size: 32px;
+      }
+    }
+
+  .choose-us-section {
+      background: #f8f9fa;
+      padding: 20px 0;
+    }
+
+    .choose-title {
+      font-size: 42px;
+      font-weight: 700;
+      /* color: #1e1e50; */
+    }
+
+    .choose-subtitle {
+      color: #b99e5c;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .choose-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      height: 100%;
+    }
+
+    .choose-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .choose-icon {
+      font-size: 36px;
+      color: #b99e5c;
+      margin-bottom: 20px;
+    }
+
+    .choose-heading {
+      font-size: 20px;
+      font-weight: 600;
+      /* color: #1e1e50; */
+    }
+
+    .choose-desc {
+      font-size: 15px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 767px) {
+      .choose-title {
+        font-size: 32px;
+      }
+    }
+
+.cta-section {
+  background: url('https://img.freepik.com/free-photo/people-taking-part-business-event_23-2149346666.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 1;
+}
+
+.cta-section .container {
+  z-index: 2;
+}
+
+.accordion {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-button {
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  padding: 1rem 1.25rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f6f2e9;
+  color: #B99E5C;
+  box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  color: #555;
+  padding: 1rem 1.25rem;
+  background-color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* contact us  */
+
+
+.contact-banner {
+ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://img.freepik.com/free-photo/group-people-attending-seminar-conference_53876-138054.jpg') center center/cover no-repeat;
+  padding: 120px 0;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.contact-banner h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.contact-banner p {
+  font-size: 1.25rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#contact {
+  position: relative;
+  background: url("https://htmldesigntemplates.com/html/eventiz/images/testimonial-1.png") no-repeat center center/cover;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.55); Dark overlay */
+  z-index: 0;
+}
+
+#contact .container {
+  position: relative;
+  z-index: 2;
+}
+
+#contact h2 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#contact input,
+#contact textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.text-gold {
+  color: #B99E5C !important;
+}
+#contact .form-control:focus {
+  border-color: #B99E5C;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.1);
+}
+
+#contact .btn-danger {
+  background-color: #B99E5C;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#contact .btn-danger:hover {
+  background-color:#a3863a;
+}
