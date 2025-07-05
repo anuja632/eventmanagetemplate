@@ -63,3 +63,13 @@
 
   document.addEventListener('scroll', toggleIcons);
   window.addEventListener('load', toggleIcons);
+
+
+  function toggleEvent(el) {
+    document.querySelectorAll('.event-box').forEach(box => {
+      if (box !== el) {
+        box.classList.remove('active');
+      }
+    });
+    el.classList.toggle('active');
+  }

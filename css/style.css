@@ -849,7 +849,7 @@ span[data-slide-description] {
     }
 
     .value-description {
-      color: #555;
+      color: black;
       margin-top: 5px;
     }
 
@@ -885,15 +885,53 @@ span[data-slide-description] {
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+.choose-box {
+  padding: 30px 20px;
+  color: #fff;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 250px;
+}
 
-    .choose-box {
-      background: #fff;
-      border-radius: 10px;
-      padding: 30px 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
-      height: 100%;
-    }
+.choose-box-1 {
+  background-image: url('https://img.freepik.com/free-photo/medium-shot-business-team-work_23-2149271746.jpg?t=st=1751702154~exp=1751705754~hmac=947886e6e841600fe09e63658b9aa4fe2d1c752f12f0e90468e1f5a6cdf6f29f&w=1380');
+}
+
+.choose-box-2 {
+  background-image: url('https://img.freepik.com/free-photo/child-s-creativity_53876-95305.jpg?t=st=1751703748~exp=1751707348~hmac=3bdd3fd6ccba9a0e9714ac1e24acc0879b5c4a07c9bd65c9d905dad48bcd06fa&w=826');
+}
+
+.choose-box-3 {
+  background-image: url('https://img.freepik.com/free-psd/3d-rendering-delivery-sales-blank-banner_23-2151558566.jpg?t=st=1751703849~exp=1751707449~hmac=9da3d1b21c3b772bf695442ea63b64abb3a9e3a66b316a3e64117b8d5ed9d85f&w=740');
+}
+
+.choose-box-4 {
+  background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?fit=crop&w=600&q=80');
+}
+
+.choose-box-5 {
+  background-image: url('https://img.freepik.com/free-photo/close-up-person-working-call-center_23-2149288220.jpg');
+}
+
+.choose-box-6 {
+  background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=600&q=80');
+}
+
+.choose-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+}
+
+.choose-box > * {
+  position: relative;
+  z-index: 2;
+}
+
 
     .choose-box:hover {
       transform: translateY(-8px);
@@ -913,7 +951,7 @@ span[data-slide-description] {
 
     .choose-desc {
       font-size: 15px;
-      color: #555;
+      color:white;
       margin-top: 10px;
     }
 
@@ -1115,3 +1153,282 @@ span[data-slide-description] {
     background-color: #B99E5C;
     color: #fff;
   }
+
+  .banner {
+    position: relative;
+    color: white;
+    /* padding: 80px 20px; */
+    background: url('https://labartisan.net/demo/unlimitcon/assets/images/gallery/3.jpg') center center/cover no-repeat;
+    /* min-height: 400px; */
+    overflow: hidden;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);  /* <-- Black semi-transparent */
+    z-index: 1;
+}
+.banner .container {
+    position: relative;
+    z-index: 2;
+}
+.banner h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.banner .btn-primary {
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: 600;
+}
+.banner .btn-primary:hover {
+    background-color: #f1f1f1;
+}
+
+.diagonal-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.speakers-banner {
+    position: relative;
+    background: url('https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') 
+                center center/cover no-repeat;
+    min-height: 400px;
+}
+
+.speakers-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* black overlay */
+    z-index: 1;
+}
+
+.speakers-banner .container {
+    position: relative;
+    z-index: 2;
+}/* Background for corporate steps section */
+    /* Background and Section */
+    .corporate-steps {
+      background: linear-gradient(
+          rgba(39, 39, 39, 0.85),
+          rgba(49, 47, 47, 0.85)
+        ),
+        url('https://images.unsplash.com/photo-1653821355736-0c2598d0a63e?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnQlMjBwbGFubmluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000')
+        center/cover no-repeat;
+    }
+
+    /* Step box */
+    .event-box {
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    /* Title */
+    .event-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .event-title i {
+      color: white;
+      transition: color 0.3s;
+    }
+
+    .event-box.active .event-title {
+      color: #B99E5C;
+    }
+
+    .event-box.active .event-title i {
+      color: #B99E5C;
+    }
+
+    /* Description hidden by default */
+    .event-desc {
+      margin-top: 15px;
+      color: white;
+      font-size: 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .event-box.active .event-desc {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* Arrows */
+    .toggle-arrow {
+      font-size: 18px;
+      color: #B99E5C;
+      margin-top: 6px;
+    }
+
+    .toggle-arrow i.up {
+      display: none;
+    }
+
+    .event-box.active .toggle-arrow i.down {
+      display: none;
+    }
+
+    .event-box.active .toggle-arrow i.up {
+      display: inline;
+      transform: translateY(-2px);
+    }
+
+    .toggle-arrow i.down {
+      transform: translateY(2px);
+    }
+        .event-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      /* padding: 20px; */
+    }
+
+    .event-card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    }
+
+    .event-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .event-image {
+      flex: 0 0 40%;
+      background-size: cover;
+      background-position: center;
+      min-height: 240px;
+    }
+
+    .event-details {
+      flex: 0 0 60%;
+      padding: 30px;
+    }
+
+    .event-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #6d648d;
+      margin-bottom: 10px;
+    }
+
+    .event-info i {
+      color: #B99E5C;
+      margin-right: 6px;
+    }
+
+    .event-titles {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #111;
+    }
+
+    .event-descs {
+      font-size: 15px;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .event-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+
+
+    .btn-read {
+      font-weight: 600;
+      font-size: 15px;
+      color: #5a4e6d;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 4px;
+    }
+
+    .btn-read:hover {
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .event-row {
+        flex-direction: column;
+      }
+
+      .event-image,
+      .event-details {
+        flex: 100%;
+      }
+
+      .event-image {
+        min-height: 200px;
+      }
+    }
+        .section-heading {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      color: #B99E5C;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .speaker-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .speaker-img:hover {
+      transform: scale(1.03);
+    }
+
+    .view-all-btn {
+      background-color: #B99E5C;
+      border: none;
+      padding: 10px 24px;
+      color: white;
+      font-weight: 600;
+      border-radius: 4px;
+        text-decoration: none;
+
+    }
+
+    .view-all-btn:hover {
+      background-color: #a3863a;
+    }
+    .exhibitions-banner {
+  min-height: 400px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('https://img.freepik.com/free-photo/abstract-blur-shopping-mall_1203-8558.jpg?t=st=1751705220~exp=1751708820~hmac=7181a6c9576c3f3b83a112ff79f8d085b356e897505d54b4e42d6fdb4fe9b028&w=740') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
